@@ -21,6 +21,15 @@ Cypress.Commands.add('login', (email, name) => {
     cy.get('input[placeholder="First Name"]').clear().type(name)
     cy.get('.mb-3 + button').click()
 })
+
+
+
+Cypress.Commands.add('signup', (name, email) => {
+    cy.get('input[data-qa="signup-name"]').type(name)
+    cy.get('input[data-qa="signup-email"]').type(email)
+    cy.get('button[data-qa="signup-button"]').click()
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
@@ -31,6 +40,7 @@ Cypress.Commands.add('logText', { prevSubject: true }, (subject) => {
     const text = subject.text()
     cy.log(text)
 })
+
 /*
 Create a child custom command that will validate the attribute and the value of previos subject
 */

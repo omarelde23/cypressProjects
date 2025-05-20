@@ -6,6 +6,11 @@ describe("Login Page Test", () => {
     beforeEach(() => {
       cy.visit(`${Cypress.env("SITE_URL")}/frontend`);
       cy.clickCard("Login Function");
+
+      cy.fixture('example').then((data) => {
+        this.username = data.username
+        this.password = data.password
+      })
     });
     
 

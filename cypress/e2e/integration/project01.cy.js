@@ -75,11 +75,6 @@ it('Validate the Gender radio button', () => {
 
 
 
-it("Tabs", () => {
-    cy.get("#microsoft").should("have.attr", "target", "_blank");
-
-    cy.get("#microsoft").invoke("removeAttr", "target").click();
-  });
 
 
 

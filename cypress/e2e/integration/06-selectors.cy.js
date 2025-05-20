@@ -51,5 +51,19 @@ describe("Cypress Selectors", () => {
         cy.get('#testing_paragraph').parents()
         cy.get('#testing_paragraph').parentsUntil()
         
+
+
+        cy.get('#apple_check')
+        .parents('#checkbox-button-group')
+        .next()
+        .find('div')
+        .children()
+        .find('input')
+        .parent()
+        .parent()
+        .parent()
+        .prev()
+
+        
     })
 })

@@ -26,9 +26,9 @@ describe("Practice", () => {
     it('Register User', () => {
         cy.get('a[href="/login"]').click()
         cy.get('.signup-form h2').should('have.text', 'New User Signup!')
-        cy.get('input[data-qa="signup-name"]').type('John Doe')
-        cy.get('input[data-qa="signup-email"]').type('JJJohhhhnnnnnydoe@gmail.com')
-        cy.get('button[data-qa="signup-button"]').click()
+        
+        cy.signup('John Doe', 'JJJohhhhnnnnnydoe@gmail.com')
+        
         cy.get('.login-form .title').first().should('have.text', 'Enter Account Information')
         cy.get('#id_gender1').click()
         cy.get('#password').type('Johndoe1234')
@@ -54,6 +54,24 @@ describe("Practice", () => {
         cy.get('a[href="/delete_account"]').click()
         cy.get('.title').contains('Account Deleted!').should('be.visible')
         cy.get('a[data-qa="continue-button"]').click()
+    })
+
+
+
+    /*
+     Launch browser
+    2. Navigate to url 'http://automationexercise.com'
+    3. Verify that home page is visible successfully
+    4. Click on 'Signup / Login' button
+    5. Verify 'Login to your account' is visible
+    6. Enter correct email address and password
+    7. Click 'login' button
+    8. Verify that 'Logged in as username' is visible
+    9. Click 'Delete Account' button
+    10. Verify that 'ACCOUNT DELETED!' is visible
+    */
+
+    it('Login user with correct Username and Password', () => {
 
     })
 })

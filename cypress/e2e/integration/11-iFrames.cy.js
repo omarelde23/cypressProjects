@@ -44,7 +44,9 @@ describe('Handling iFrames', () => {
 
         cy.get('#result')
         .should('have.text', `You entered: ${arr.join(' ')}`)
-
      })
+
+
+     
     
 })

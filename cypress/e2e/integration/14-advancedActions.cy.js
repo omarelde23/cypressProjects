@@ -61,6 +61,7 @@ it('Right Click and Double Click', () => {
     cy.get('#drag_element').drag('#drop_element')
   })
 
+
 })
 
 

@@ -16,7 +16,14 @@ describe("Handling Alerts", () => {
     it('Child Commands', () => {
         cy.get('#main_heading').logText()
         cy.get('#main_heading').haveText('HTML Elements')
-        
+
+
+        cy.log(Cypress.env('UI_URL'))
+
+        cy.log(Cypress.env('UI_USERNAME'))
+        cy.log(Cypress.env('UI_PASSWORD'))
+
+        cy.pause()
     })
     
 })

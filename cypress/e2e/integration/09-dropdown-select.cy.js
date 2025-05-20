@@ -10,7 +10,7 @@ describe('Dropdown select', () => {
         cy.get('#product_dropdown').select('Apple Watch Series 8')
         cy.get('#color_dropdown').select('Yellow')
 
-        
+        cy.get()
 
     })
 

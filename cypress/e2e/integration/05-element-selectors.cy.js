@@ -162,6 +162,9 @@ describe('The Boxes', () => {
         cy.get('#ordered_list > li:first-child')
         cy.get('#ordered_list > li:last-child')
         cy.get('#ordered_list > li:nth-child(2)')
+
+        cy.get('#microsoft_check input').check()
+        
     })
 })
 

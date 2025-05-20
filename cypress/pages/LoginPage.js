@@ -1,7 +1,7 @@
 
 
 
-class LoginPage {
+class LoginPage extends BasePage {
     /* Locaters */
     getUsernameField() {
         return cy.get('#username')
@@ -18,6 +18,11 @@ class LoginPage {
 
     getSuccessMessage() {
         return cy.get('#success_lgn')
+    }
+
+
+    getErrorMessage() {
+        return cy.get('#error_message')
     }
 
 
